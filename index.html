@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervical Cancer Awareness</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.7.1/dist/cdn.min.js" defer></script>
+</head>
+<body x-data="{ darkMode: false }" :class="darkMode ? 'dark' : ''" class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <a href="#" class="font-bold text-xl">Cervical Cancer Awareness</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#introduction" class="hover:underline">Introduction</a>
+                <a href="#prevention" class="hover:underline">Prevention</a>
+                <a href="#treatment" class="hover:underline">Treatment</a>
+                <a href="#case-studies" class="hover:underline">Case Studies</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </div>
+            <button @click="darkMode = !darkMode" class="ml-4 bg-white text-blue-600 px-2 py-1 rounded-md">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="p-8">
+        <h2 class="text-2xl font-semibold">What is Cervical Cancer?</h2>
+        <p class="mt-4">
+            Cervical cancer is a type of cancer that occurs in the cells of the cervix — the lower part of the uterus that connects to the vagina.
+            Various strains of the human papillomavirus (HPV), a sexually transmitted infection, play a role in causing most cervical cancer.
+        </p>
+        <p class="mt-4">
+            Globally, cervical cancer is one of the most common causes of cancer-related deaths among women.
+            However, with early detection and treatment, it can often be successfully managed.
+        </p>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="bg-white p-8">
+        <div class="carousel relative">
+            <div class="carousel-inner relative overflow-hidden w-full">
+                <input type="radio" name="carousel" id="carousel-1" hidden checked>
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <img src="https://source.unsplash.com/random/1200x600/?cancer" class="w-full h-full object-cover">
+                </div>
+                <input type="radio" name="carousel" id="carousel-2" hidden>
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <img src="https://source.unsplash.com/random/1200x600/?health" class="w-full h-full object-cover">
+                </div>
+                <input type="radio" name="carousel" id="carousel-3" hidden>
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <img src="https://source.unsplash.com/random/1200x600/?doctor" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="carousel-controls flex justify-center mt-4">
+                <label for="carousel-1" class="carousel-control cursor-pointer block text-2xl">&#x25cf;</label>
+                <label for="carousel-2" class="carousel-control cursor-pointer block text-2xl">&#x25cf;</label>
+                <label for="carousel-3" class="carousel-control cursor-pointer block text-2xl">&#x25cf;</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Section -->
+    <section id="prevention" class="bg-white p-8">
+        <h2 class="text-2xl font-semibold">Prevention Methods</h2>
+        <ul class="list-disc mt-4 ml-5">
+            <li>Get vaccinated against HPV.</li>
+            <li>Have regular Pap tests to detect cervical changes.</li>
+            <li>Practice safe sex by using condoms and limiting the number of sexual partners.</li>
+            <li>Quit smoking, as it increases the risk of cervical cancer.</li>
+        </ul>
+    </section>
+
+    <!-- Treatment Section -->
+    <section id="treatment" class="p-8">
+        <h2 class="text-2xl font-semibold">Treatment Options</h2>
+        <p class="mt-4">
+            The treatment for cervical cancer depends on several factors, such as the stage of cancer and the patient's overall health.
+            Treatment options may include surgery, radiation therapy, chemotherapy, or a combination of these methods.
+        </p>
+        <p class="mt-4">
+            Early-stage cervical cancer is generally treated with surgery, while advanced-stage cancer may require a combination of treatments.
+            Regular follow-ups and monitoring are crucial for managing the condition effectively.
+        </p>
+    </section>
+
+    <!-- Real-World Case Studies Section -->
+    <section id="case-studies" class="bg-white p-8">
+        <h2 class="text-2xl font-semibold">Real-World Case Studies</h2>
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">Jane Doe's Story</h3>
+            <p>
+                Jane was diagnosed with cervical cancer at the age of 32. After undergoing surgery and chemotherapy, she is now cancer-free and advocates for regular screening and early detection.
+            </p>
+        </div>
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">Mary Smith's Journey</h3>
+            <p>
+                Mary was diagnosed with cervical cancer during a routine check-up. Thanks to early detection and prompt treatment, she is now living a healthy life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="p-8">
+        <h2 class="text-2xl font-semibold">Testimonials</h2>
+        <blockquote class="border-l-4 border-blue-600 pl-4 mt-4">
+            "Regular screening is crucial for early detection. Many lives can be saved with timely interventions." - Dr. Emily Johnson, Oncologist
+        </blockquote>
+        <blockquote class="border-l-4 border-blue-600 pl-4 mt-4">
+            "The HPV vaccine is a powerful tool in preventing cervical cancer. I encourage everyone to get vaccinated." - Dr. Robert Brown, Gynecologist
+        </blockquote>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white p-8">
+        <h2 class="text-2xl font-semibold">Frequently Asked Questions (FAQs)</h2>
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">What are the symptoms of cervical cancer?</h3>
+            <p>
+                Early-stage cervical cancer generally produces no symptoms. Symptoms may develop as the cancer advances, including abnormal vaginal bleeding, pelvic pain, or pain during intercourse.
+            </p>
+        </div>
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">How can I prevent cervical cancer?</h3>
+            <p>
+                Prevention includes getting vaccinated against HPV, having regular Pap tests, practicing safe sex, and avoiding smoking.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="p-8">
+        <h2 class="text-2xl font-semibold">Get in Touch</h2>
+        <form action="#" method="POST" class="mt-4">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700">Message:</label>
+                <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-4">
+        <div class="text-center">
+            <p>For more information, visit <a href="https://www.who.int/news
